@@ -1,0 +1,577 @@
+/* ---------- GLOBAL + FONT ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* ---------- AUTH (LOGIN / SIGNUP) ---------- */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo-text {
+  font-size: 18px;
+  letter-spacing: 0.05em;
+}
+
+.logo-light {
+  font-weight: 400;
+  color: #6b7280;
+  margin-right: 4px;
+}
+
+.logo-bold {
+  font-weight: 600;
+  color: #111827;
+}
+
+.auth-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.auth-panel {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 28px 32px 24px 32px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+.auth-header h2 {
+  margin: 0 0 4px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.auth-header p {
+  margin: 0 0 20px 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.auth-toggle-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.auth-toggle-btn {
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.auth-toggle-btn.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.auth-toggle-btn:not(.active):hover {
+  background-color: #e5e7eb;
+}
+
+.auth-form-area {
+  margin-bottom: 8px;
+}
+
+.form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.field-label {
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.field-input {
+  border: none;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px 0;
+  font-size: 13px;
+  outline: none;
+}
+
+.field-input:focus {
+  border-bottom-color: #2563eb;
+}
+
+.primary-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 6px;
+  border: none;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.primary-btn:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.primary-btn.small {
+  width: auto;
+  padding: 7px 12px;
+  font-size: 12px;
+}
+
+.primary-btn.tiny {
+  width: auto;
+  padding: 5px 10px;
+  font-size: 11px;
+}
+
+.ghost-btn {
+  padding: 7px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.ghost-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.form-message {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #16a34a;
+}
+
+.auth-bottom-text {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.link-button {
+  border: none;
+  background: none;
+  color: #2563eb;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 2px;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
+/* ---------- DASHBOARD SHELL ---------- */
+
+.app-shell-logged {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+/* overall wrapper */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* LEFT ICON SIDEBAR */
+.sidebar {
+  width: 72px;
+  background-color: #020617;
+  color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0;
+  gap: 16px;
+}
+
+.sidebar-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background-color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.sidebar-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+  background-color: transparent;
+  color: #e5e7eb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-icon.active {
+  background-color: #1e293b;
+}
+
+.sidebar-icon:hover {
+  background-color: #111827;
+}
+
+.sidebar-icon.logout {
+  margin-top: auto;
+  margin-bottom: 4px;
+  color: #fca5a5;
+}
+
+/* MAIN DASH AREA */
+.dash-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOP BAR INSIDE DASH */
+.dash-topbar {
+  height: 72px;
+  padding: 16px 32px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dash-page-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.dash-page-sub {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.dash-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dash-search {
+  width: 220px;
+  max-width: 260px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.dash-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background-color: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* SCROLL AREA */
+.dash-scroll {
+  padding: 20px 28px 28px 28px;
+  overflow-y: auto;
+}
+
+/* ---------- ADMIN DASHBOARD ---------- */
+
+.adm-summary-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.adm-summary-card {
+  flex: 1 1 180px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 12px 14px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.adm-label {
+  margin: 0 0 4px 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.adm-value {
+  margin: 0 0 4px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.adm-hint {
+  margin: 0;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.adm-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.adm-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.adm-card-title {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.adm-card-sub {
+  margin: 0 0 10px 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.adm-chart-placeholder {
+  height: 180px;
+  border-radius: 10px;
+  border: 1px dashed #cbd5f5;
+  background: linear-gradient(
+    to bottom right,
+    rgba(37, 99, 235, 0.06),
+    rgba(14, 116, 144, 0.04)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.adm-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.adm-list li + li {
+  margin-top: 4px;
+}
+
+.adm-card.full {
+  margin-top: 4px;
+}
+
+.adm-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.adm-table-placeholder {
+  border-radius: 8px;
+  border: 1px dashed #d1d5db;
+  padding: 16px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ---------- USER DASHBOARD (FOOD GRID) ---------- */
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.chip.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 12px 12px 10px 12px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.product-image-placeholder {
+  height: 110px;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.12),
+    rgba(59, 130, 246, 0.04)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #1e3a8a;
+}
+
+.product-name {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.product-meta {
+  margin: 0;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.product-footer {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-price {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.product-note {
+  margin: 4px 0 0 0;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+  .auth-panel {
+    padding: 20px 18px;
+  }
+
+  .top-bar {
+    padding: 0 18px;
+  }
+
+  .dash-topbar {
+    padding: 14px 16px;
+  }
+
+  .dash-search {
+    width: 160px;
+  }
+
+  .adm-main-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+  }
+}
