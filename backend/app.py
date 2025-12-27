@@ -14,7 +14,7 @@ def get_db_connection():
     conn = mysql.connector.connect( #object of connection
         host="localhost",
         user="root",              # your MySQL username
-        password="#ARWA@0110",    # your MySQL password
+        password="#YOur key",    # your MySQL password
         database="cafeteria_db"   # your DB name
     )
     return conn
